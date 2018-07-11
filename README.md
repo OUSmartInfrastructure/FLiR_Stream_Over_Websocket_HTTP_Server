@@ -10,6 +10,10 @@ By running websocket_http_server.py, the python program will startup an http ser
 
 [Click here for more information about the websocket_http_server.py](https://github.com/cj667113/Websocket_HTTP_Server "cj667113/Websocket_HTTP_Server ")
 
+In order to get this to work, you will need to import these packages:
+
+![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/packages_needed.jpg)
+
 Furthermore, I added FLiR Lepton cammera support to the websocket_http_server.py, in which the program will save the file as a jpeg in the form of a matplot heatmap.
 
 ![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/FLiR_program_module.jpg)
