@@ -1,6 +1,6 @@
 # FLiR_Stream_Over_Websocket_HTTP_Server
 
-This project is an enhanced version of the websocket_http_server that I wrote that is designed to be used specifically with the FLiR Lepton Camera.
+This project is an enhanced version of the websocket_http_server that I wrote, which is designed to be used specifically with the FLiR Lepton Camera to stream data to a browser over a websocket connection after being served index.html through http, in which index.html launches a small javascript program to hook into the websocket server to collect image data.
 
 ![alt text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/Capture.JPG)
 
