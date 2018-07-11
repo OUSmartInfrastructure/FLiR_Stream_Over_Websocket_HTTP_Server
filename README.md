@@ -8,7 +8,7 @@ Websocket_HTTP_Server is a collection of files that will easily display a set of
 
 By running websocket_http_server.py, the python program will startup an http server and a websocket server which will pull configuration settings from server.conf which also has a file path to the image that will be constantly sent in a loop. The program will encode thermal.jpg into a base64 format and sent it over the websocket connection.
 
-[Click here for more information about the websocket_http_server.py](https://github.com/cj667113/Websocket_HTTP_Server "Websocket_HTTP_Server ")
+[Click here for more information about the websocket_http_server.py](https://github.com/cj667113/Websocket_HTTP_Server "cj667113/Websocket_HTTP_Server ")
 
 Furthermore, I added FLiR Lepton cammera support to the websocket_http_server.py, in which the program will save the file as a jpeg in the form of a matplot heatmap.
 
