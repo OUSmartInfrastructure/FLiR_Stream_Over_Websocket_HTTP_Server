@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>ITS HD-FLiR-B/W</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <script type="text/javascript" charset="utf-8">
+      window.onload = function() {
+        var s = new WebSocket("ws://10.101.8.26:9876/");
+        s.onopen = function(e) {document.getElementById("connection").innerHTML="Connection: open"; }
+        s.onclose = function(e) {document.getElementById("connection").innerHTML="Connection: closed"; }
+	s.onmessage =function(e){
+		var thermal = document.getElementById('image');
+		thermal.src = 'data:image/jpg;base64,'+e.data;
+		document.body.appendChild(thermal);
+	}
+	}
+    </script>
+  </head>
+    <body><center>
+	<img id = "image" style="display:block; margin:0 auto; height="60%" width="60%"/>
+	<!--<p id ="connection"></p>-->
+	<!--<p id = "output"></p>-->
+    </center></body>
+</html>
+
