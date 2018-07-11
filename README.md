@@ -15,3 +15,5 @@ server.conf is the configuration file that websocket_http_server.py will use in 
 ![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/server_conf.jpg)
 
 index.html is server by the http server, which onload will hook into the websocket server. index.html will collect the data that is being streamed from the websocket server and display it as an image by decoding the image and placing it on the web browser. index.html handles the formating of the image in terms of the dimensions that it will be displayed as.
+
+![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/index.jpg)
