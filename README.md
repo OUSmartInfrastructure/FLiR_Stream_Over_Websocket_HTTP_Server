@@ -2,7 +2,7 @@
 
 This project is an enhanced version of the websocket_http_server that I wrote, which is designed to be used specifically with the FLiR Lepton Camera to stream data to a browser over a websocket connection after being served index.html through http, in which index.html launches a small javascript program to hook into the websocket server to collect image data.
 
-![alt text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/Capture.JPG)
+![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/Capture.JPG)
 
 Websocket_HTTP_Server is a collection of files that will easily display a set of data being gathered over a web browser, the collection was originally built to display thermal images over http/tcp port 80 in a real-time fasion. When connecting to the http server, the server delivers index.html to the client that launch a javascript program on load. This program connects to the websocket server, where the websocket server stream down to all the clients.
 
@@ -11,6 +11,8 @@ By running websocket_http_server.py, the python program will startup an http ser
 [Click here for more information about the websocket_http_server.py](https://github.com/cj667113/Websocket_HTTP_Server "cj667113/Websocket_HTTP_Server ")
 
 Furthermore, I added FLiR Lepton cammera support to the websocket_http_server.py, in which the program will save the file as a jpeg in the form of a matplot heatmap.
+
+![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/FLiR_program_module.jpg)
 
 server.conf is the configuration file that websocket_http_server.py will use in order to determine that port and interface numbers that the servers will broadcast on, as well as the image data that will be sent over the websocket connection.
 
