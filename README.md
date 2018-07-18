@@ -34,3 +34,17 @@ server.conf is the configuration file that websocket_http_server.py will use in 
 index.html is server by the http server, which onload will hook into the websocket server. index.html will collect the data that is being streamed from the websocket server and display it as an image by decoding the image and placing it on the web browser. index.html handles the formating of the image in terms of the dimensions that it will be displayed as.
 
 ![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/index.jpg)
+
+Now we would like to start the program on boot. To do this we are going to make a service in systemd.
+
+First, sudo cp websocket_http.service /etc/systemd/system/websocket_http.service
+
+Second, sudo systemctl daemon-reload
+
+Third, sudo systemctl enable websocket_http.service
+
+Lastly, sudo systemctl start websocket_http.service --no-block
+
+To check to make sure everything is working properly, we can sudo systemctl status websocket_http.service, which should look like this:
+
+![alt+text](https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/service_configuration.JPG)
