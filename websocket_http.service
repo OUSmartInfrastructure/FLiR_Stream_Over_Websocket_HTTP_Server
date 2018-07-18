@@ -1,0 +1,11 @@
+[Unit]
+Description=Websocket HTTP Server
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /usr/local/bin/Websocket_HTTP_Server/websocket_http_server.py
+WorkingDirectory=/usr/local/bin/Websocket_HTTP_Server
+
+[Install]
+WantedBy=sysinit.target
+
