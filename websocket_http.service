@@ -2,9 +2,10 @@
 Description=Websocket HTTP Server
 
 [Service]
-Type=idle
+Type=simple
 ExecStart=/usr/bin/python /usr/local/bin/Websocket_HTTP_Server/websocket_http_server.py
 WorkingDirectory=/usr/local/bin/Websocket_HTTP_Server
+Restart=on-failure
 
 [Install]
 WantedBy=sysinit.target
