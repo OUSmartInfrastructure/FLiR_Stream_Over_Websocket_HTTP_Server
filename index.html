@@ -6,15 +6,20 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <script type="text/javascript" charset="utf-8">
       window.onload = function() {
+      function start(connect) {
         var s = new WebSocket("ws://10.101.8.26:9876/");
         s.onopen = function(e) {document.getElementById("connection").innerHTML="Connection: open"; }
         s.onclose = function(e) {document.getElementById("connection").innerHTML="Connection: closed"; }
-	s.onmessage =function(e){
-		var thermal = document.getElementById('image');
-		thermal.src = 'data:image/jpg;base64,'+e.data;
-		document.body.appendChild(thermal);
-	}
-	}
+        s.onclose = function(){
+                setTimeout(function(){start(connect)}, 5);}
+        s.onmessage =function(e){
+                var thermal = document.getElementById('image');
+                thermal.src = 'data:image/jpg;base64,'+e.data;
+                document.body.appendChild(thermal);
+        }
+        }
+        start();
+
     </script>
   </head>
     <body><center>
