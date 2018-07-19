@@ -11,7 +11,7 @@
         s.onopen = function(e) {document.getElementById("connection").innerHTML="Connection: open"; }
         s.onclose = function(e) {document.getElementById("connection").innerHTML="Connection: closed"; }
         s.onclose = function(){
-                setTimeout(function(){start(connect)}, 5);}
+                setTimeout(function(){start(connect)}, 500);}
         s.onmessage =function(e){
                 var thermal = document.getElementById('image');
                 thermal.src = 'data:image/jpg;base64,'+e.data;
