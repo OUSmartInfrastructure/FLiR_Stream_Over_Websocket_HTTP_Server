@@ -78,7 +78,7 @@ def program_start():
 					except:
 						pass
 			if i == 1:
-				start_data_stream()
+				threading.Thread(target=start_data_stream).start()
 			else:
 				print("okay")
 
