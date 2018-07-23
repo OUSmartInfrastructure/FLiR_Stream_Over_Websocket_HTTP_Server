@@ -80,7 +80,7 @@ def program_start():
 			if i == 1:
 				start_data_stream()
 			else:
-				pass
+				print("okay")
 
 		        print("New client connected and was given id %d" % client['id'])
 
