@@ -9,10 +9,6 @@ Please setup the FLiR camera to the microcontroller properly. For a Raspberry Pi
 
 <img src="https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/HW_Set_1.jpg" height="50%" width="50%">
 
-Furthermore, since we planned on deploying the FLiR Lepton further away from where the Raspberry Pi 3 will be located, we decided that it would be best to connect the connector pins to a female RJ45 Connector, both for the camera and the Raspberry Pi 3. This way, we could use an ethernet cord to act as an extension cord from the Raspberry Pi 3 to the Camera.
-
-<p><img src="https://github.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/blob/master/Img/RJ45_5.jpeg" height="360" width="260"/><img src="https://github.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/blob/master/Img/RJ45_3.jpg" height="360" width="260"/><img src="https://github.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/blob/master/Img/RJ45_2.jpg" height="360" width="260"/><img src="https://github.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/blob/master/Img/RJ45_1.jpg" height="360" width="260" /><img src="https://raw.githubusercontent.com/cj667113/FLiR_Stream_Over_Websocket_HTTP_Server/master/Img/RJ45_4.jpg" height="360" width="260"/></p>
-
 Websocket_HTTP_Server is a collection of files that will easily display a set of data being gathered over a web browser, the collection was originally built to display thermal images over http/tcp port 80 in a real-time fashion. When connecting to the http server, the server delivers index.html to the client that will launch a javascript program on load. This program connects to the websocket server, where the websocket server will stream to all the clients.
 
 By running websocket_http_server.py, the python program will startup an http server and a websocket server which will pull configuration settings from server.conf which also has a file path to the image that will be constantly sent in a loop. The program will encode thermal.jpg into a base64 format and sent it over the websocket connection.
