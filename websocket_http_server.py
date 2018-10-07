@@ -1,5 +1,6 @@
 import socket
 import os
+import re
 from PIL import Image
 import scipy.misc
 from websocket_server import WebsocketServer
@@ -55,6 +56,26 @@ def program_start():
 	        	c1.send(data)
 			time.sleep(.01)
 	       		c1.close()
+			
+        def setIP():
+                while True:
+                        ip = os.popen('ip addr show eth0 | grep "\<inet\>" | awk \'{ print $2 }\' | awk -F "/" \'{ print $1 }\'').read().strip()
+                        print(ip)
+                        html_code = []
+                        html = open("index.html","r")
+                        for line in html:
+                                html_code.append(line)
+                        for line in html_code:
+                                match = re.findall('var s = new WebSocket',line)
+                                if len(match)>0:
+                                        position=html_code.index(line)
+                        html_code[9] = '        var s = new WebSocket("ws://%s:9876/");\n' %ip
+                        with open("index.html","w") as index:
+                                for line in html_code:
+                                        index.write(str(line))
+                        time.sleep(60)
+
+
 
 	def websocket_server():
 		global i
@@ -94,6 +115,7 @@ def program_start():
 		server.run_forever()
 
 	threading.Thread(target=save_image).start()
+	threading.Thread(taget=setIP).start
 	threading.Thread(target=websocket_server).start()
 	threading.Thread(target=http_server).start()
 program_start()
