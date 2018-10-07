@@ -101,7 +101,7 @@ def program_start():
 			if i == 1:
 				threading.Thread(target=start_data_stream).start()
 			else:
-				print("okay")
+				pass
 
 		        print("New client connected and was given id %d" % client['id'])
 
