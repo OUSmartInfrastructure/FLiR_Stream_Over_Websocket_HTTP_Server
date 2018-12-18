@@ -39,7 +39,7 @@ def program_start():
 	def save_image():
 		while True:
 			image = capture()
-			im = plt.imsave("thermal.jpg", image.mean(2),cmap="jet")
+			im = plt.imsave("thermal.jpg",np.fliplr(image.mean(2)),cmap="jet")
 	def http_server():
 		addr = socket.getaddrinfo(http_interface, http_port)[0][-1]
 		s = socket.socket()
